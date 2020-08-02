@@ -115,10 +115,12 @@ module.exports = {
         // config
         //     .plugin("optimize-css")
         //         .use(optimizeCss, [{}]);
-        // config
-        //     .optimization
-        //         .minimizer("optimize-css")
-        //             .use(optimizeCss, [{}])
+        config
+            .plugins.delete("optimize-css")
+        config
+            .optimization
+                .minimizer("optimize-css1")
+                    .use(optimizeCss, [{}])
         // config
         //     .optimization
         //         .splitChunks({
